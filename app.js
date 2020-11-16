@@ -1,3 +1,14 @@
+var date = new Date();
+var year = date.getFullYear();
+var month = date.getMonth() + 1;
+var day = date.getDate();
+
+var imgs = document.getElementsByTagName("img");
+for( var x=0; x < imgs.length; x++ ) {
+ imgs[x].onclick = function(){
+ alert(`Copyright ${year}-${month}-${day} 문성호. all rights reserved.`);
+ };
+}
 const canvas = document.getElementById("jsCanvas");
 const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");

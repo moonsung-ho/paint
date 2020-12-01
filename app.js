@@ -1,5 +1,5 @@
 const name = prompt("이름을 정하세요")
-document.title = name
+document.title = `${name}-🎨`
 var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth() + 1;

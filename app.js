@@ -1,3 +1,5 @@
+const name = prompt("이름을 정하세요")
+document.title = name
 var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth() + 1;
@@ -88,7 +90,7 @@ function handleSaveClick(){
     const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;
-    link.download = "🎨";
+    link.download = name;
     link.click();
 }
 

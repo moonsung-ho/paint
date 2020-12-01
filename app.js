@@ -1,4 +1,4 @@
-document.title = "untitle-Paint"
+document.title = "untitled-Paint"
 var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth() + 1;

@@ -1,4 +1,12 @@
-document.title = "untitled-Paint"
+const name = prompt("이름을 정하세요")
+if (name = "문성호 천재") {
+alert("인정")
+}
+if (name = "김필기 천재") {
+alert("아님")
+const name = "문성호 천재"
+}
+    document.title = `${name}-Paint`
 var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth() + 1;
@@ -86,15 +94,6 @@ function handleCM(event){
 }
 
 function handleSaveClick(){
-    const name = prompt("이름을 정하세요")
-    if (name = "문성호 천재") {
-     alert("인정")
-    }
-    if (name = "김필기 천재") {
-     alert("아님")
-     const name = "문성호 천재"
-    }
-    document.title = `${name}-Paint`
     const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;

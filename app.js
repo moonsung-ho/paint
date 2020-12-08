@@ -6,7 +6,7 @@ if (name = "김필기 천재") {
 alert("아님")
 const name = "문성호 천재"
 }
-    document.title = `${name}-Paint`
+document.title = `${name}-Paint`
 var date = new Date();
 var year = date.getFullYear();
 var month = date.getMonth() + 1;

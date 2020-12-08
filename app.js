@@ -116,7 +116,7 @@ alert("인정");
 }
 else if (name = "김필기 천재") {
 alert("아님");
-const name = "문성호 천재";
+const name = "김필기 천재 ";
 }
 document.title = `${name}-Paint`;
 

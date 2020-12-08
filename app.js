@@ -33,13 +33,6 @@ let painting = false;
 let filling = false
 
 const name = prompt("이름을 정하세요")
-if (name = "문성호 천재") {
-alert("인정")
-}
-if (name = "김필기 천재") {
-alert("아님")
-const name = "문성호 천재"
-}
 document.title = `${name}-Paint`
 
 function stopPainting(){
@@ -117,6 +110,14 @@ if(canvas){
 }
 
 Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
+
+if (name = "문성호 천재") {
+alert("인정")
+}
+if (name = "김필기 천재") {
+alert("아님")
+const name = "문성호 천재"
+}
 
 if(range){
     range.addEventListener("input", handleRangeChange)

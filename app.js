@@ -30,10 +30,10 @@ ctx.fillStyle = "INITIAL_COLOR";
 ctx.lineWidth = 2.5;
 
 let painting = false;
-let filling = false
+let filling = false;
 
-const name = prompt("이름을 정하세요")
-document.title = `${name}-Paint`
+var name = prompt("이름을 정하세요");
+document.title = `${name}-Paint`;
 
 function stopPainting(){
     painting = false;
@@ -112,13 +112,13 @@ if(canvas){
 Array.from(colors).forEach(color => color.addEventListener("click", handleColorClick));
 
 if (name = "문성호 천재") {
-alert("인정")
+alert("인정");
 }
-if (name = "김필기 천재") {
-alert("아님")
-const name = "문성호 천재"
+else if (name = "김필기 천재") {
+alert("아님");
+const name = "문성호 천재";
 }
-document.title = `${name}-Paint`
+document.title = `${name}-Paint`;
 
 if(range){
     range.addEventListener("input", handleRangeChange)

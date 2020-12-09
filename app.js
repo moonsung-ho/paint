@@ -89,15 +89,8 @@ function handleCM(event){
 function handleSaveClick(){
     var name = prompt("이름을 정하세요");
     document.title = `${name}-Paint`;
-    if (name = badwords) {
+    if (name = "문성호 천재") {
      alert("인정");
-    }
-
-    if (name = "바보") {
-     window.location.reload();
-    }
-    if (name = "문성호") {
-     window.location.reload();
     }
     const image = canvas.toDataURL();
     const link = document.createElement("a");

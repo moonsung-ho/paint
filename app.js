@@ -3,6 +3,8 @@ var year = date.getFullYear();
 var month = date.getMonth() + 1;
 var day = date.getDate();
 
+var badwords = new Array("똥","바보","멍청이","메롱");
+
 var imgs = document.getElementsByTagName("img");
 for( var x=0; x < imgs.length; x++ ) {
  imgs[x].onclick = function(){
@@ -31,9 +33,6 @@ ctx.lineWidth = 2.5;
 
 let painting = false;
 let filling = false;
-
-var name = prompt("이름을 정하세요");
-document.title = `${name}-Paint`;
 
 function stopPainting(){
     painting = false;
@@ -88,6 +87,18 @@ function handleCM(event){
 }
 
 function handleSaveClick(){
+    var name = prompt("이름을 정하세요");
+    document.title = `${name}-Paint`;
+    if (name = badwords) {
+     alert("인정");
+    }
+
+    if (name = "바보") {
+     window.location.reload();
+    }
+    if (name = "문성호") {
+     window.location.reload();
+    }
     const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;
@@ -114,9 +125,9 @@ Array.from(colors).forEach(color => color.addEventListener("click", handleColorC
 if (name = "문성호 천재") {
 alert("인정");
 }
-if (name = "김필기 천재") {
-alert("아님");
-const name = "문성호 천재 ";
+
+if (name = "바보") {
+window.location.reload();
 }
 document.title = `${name}-Paint`;
 

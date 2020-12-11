@@ -3,6 +3,8 @@ var year = date.getFullYear();
 var month = date.getMonth() + 1;
 var day = date.getDate();
 
+var badwords = new Array("똥","바보","멍청이","메롱");
+
 var imgs = document.getElementsByTagName("img");
 for( var x=0; x < imgs.length; x++ ) {
  imgs[x].onclick = function(){
@@ -30,7 +32,7 @@ ctx.fillStyle = "INITIAL_COLOR";
 ctx.lineWidth = 2.5;
 
 let painting = false;
-let filling = false
+let filling = false;
 
 function stopPainting(){
     painting = false;
@@ -85,10 +87,15 @@ function handleCM(event){
 }
 
 function handleSaveClick(){
+    var name = prompt("이름을 정하세요");
+    document.title = `${name}-Paint`;
+    if (name === "문성호 천재") {
+     alert("인정");
+    }
     const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;
-    link.download = "🎨";
+    link.download = name;
     link.click();
 }
 
